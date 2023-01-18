@@ -4,12 +4,13 @@ import { motion, AnimatePresence } from "framer-motion"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
-const duration = 0.5
+const duration = 0.8
 
 const variants = {
   initial: {
     opacity: 0,
-    x: 100
+    x: 0,
+    scale: 1
   },
   animate: {
     opacity: 1,
@@ -20,11 +21,13 @@ const variants = {
       delay: duration,
       when: "beforeChildren",
     },
+    scale: 1
   },
   exit: {
     opacity: 0,
-    y: 200,
+    y: 0,
     transition: { duration: duration },
+    scale: 2
   },
 }
 
