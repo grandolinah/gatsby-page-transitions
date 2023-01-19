@@ -1,14 +1,19 @@
 import React from "react"
 
+import FadeInWhenVisible from "../../components/FadeInWhenVisible";
+import Box from "../../components/Box";
+
 const IndexPage = () => {
   return (
     <div className="flex items-center justify-center bg-cyan-500 min-h-layout">
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII"
-      />
+      <div>
+        {[...Array(10)].map(item => (
+          <FadeInWhenVisible>
+            <Box />
+          </FadeInWhenVisible>
+        ))}
+      </div>
     </div>
-
   )
 }
 

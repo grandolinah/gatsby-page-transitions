@@ -48,6 +48,9 @@ module.exports = {
       minHeight: {
         layout: 'calc(100vh - 112px)'
       },
+      transformOrigin: {
+        '0': '0%',
+      }
     },
   },
   plugins: [rotateY, backfaceVisibility, perspective, preserve3d],
