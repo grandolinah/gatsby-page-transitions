@@ -8,10 +8,10 @@ const FlipCard = () => {
       <div
         className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000"
       >
-        <div className="absolute backface-hidden border-2 w-[300px] h-[420px] bg-cyan-600">
+        <div className="absolute backface-hidden border-2 w-[300px] h-[420px] bg-cyan-400">
         </div>
         <div
-          className="absolute rotate-y-180 backface-hidden w-full h-full bg-fuchsia-800 overflow-hidden"
+          className="absolute rotate-y-180 backface-hidden border-2 w-full h-full bg-fuchsia-400 overflow-hidden"
         >
           <div
             className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"

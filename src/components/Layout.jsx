@@ -1,5 +1,5 @@
-import React from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import React, { useRef } from "react"
+import { motion, AnimatePresence, useMotionValueEvent, useScroll, scrollYProgress } from "framer-motion"
 
 import Header from "./Header"
 import Footer from "./Footer"
@@ -32,9 +32,16 @@ const variants = {
 }
 
 export const Layout = ({ children, location }) => {
+  const ref = useRef(null);
+  const { scrollYProgress, scrollY } = useScroll({ target: ref });
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log("Page scroll: ", latest)
+  })
+
   return (
-  <>
-    <Header/>
+    <>
+      <Header />
       <div className="min-h-layout">
         <AnimatePresence>
           <motion.main
@@ -44,14 +51,14 @@ export const Layout = ({ children, location }) => {
             animate="animate"
             exit="exit"
           >
-            <main>
-              {children}
-            </main>
+            <motion.div className="fixed top-0 left-0 right-0 h-4 w-full origin-0 bg-lime-500" style={{ scaleX: scrollYProgress }} />
+            {children}
           </motion.main>
         </AnimatePresence>
       </div>
-    <Footer />
-  </>
-)}
+      <Footer />
+    </>
+  )
+}
 
 export default Layout
