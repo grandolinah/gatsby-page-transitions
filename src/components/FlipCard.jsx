@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FlipCard = () => {
+const FlipCard = ({ children }) => {
   return (
     <div
       className="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective"
@@ -17,6 +17,7 @@ const FlipCard = () => {
             className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
           >
             <h1 className="text-3xl font-semibold">Card example</h1>
+            {children}
           </div>
         </div>
       </div>
