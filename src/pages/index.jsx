@@ -56,7 +56,7 @@ const IndexPage = () => {
   const [activeModalInfo, setActiveModalInfo] = useState(null);
 
   return (
-    <div className="relative">
+    <div>
       <section className="flex items-center justify-center bg-pink-500 min-h-layout">
         <h1 className="text-3xl font-bold underline">
           Hello world!

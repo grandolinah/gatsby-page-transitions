@@ -42,7 +42,7 @@ export const Layout = ({ children, location }) => {
   return (
     <>
       <Header />
-      <div className="min-h-layout">
+      <div className="min-h-layout relative">
         <AnimatePresence>
           <motion.main
             key={location?.pathname}
