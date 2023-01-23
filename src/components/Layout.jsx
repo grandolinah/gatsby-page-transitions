@@ -42,20 +42,18 @@ export const Layout = ({ children, location }) => {
   return (
     <>
       <Header />
-      <div className="min-h-layout relative">
-        <AnimatePresence>
-          <motion.main
-            key={location?.pathname}
-            variants={variants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-          >
-            <motion.div className="fixed top-0 left-0 right-0 h-4 w-full origin-0 bg-lime-500" style={{ scaleX: scrollYProgress }} />
-            {children}
-          </motion.main>
-        </AnimatePresence>
-      </div>
+      <AnimatePresence>
+        <motion.main
+          key={location?.pathname}
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          <motion.div className="fixed top-0 left-0 right-0 h-4 w-full origin-0 bg-lime-500 z-100" style={{ scaleX: scrollYProgress }} />
+        </motion.main>
+      </AnimatePresence>
+      {children}
       <Footer />
     </>
   )

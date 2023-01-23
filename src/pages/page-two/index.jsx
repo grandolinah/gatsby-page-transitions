@@ -1,15 +1,27 @@
 import React from "react"
 
+import Card from "../../components/Card";
+
+const FOOD = [
+  ["🍅", 340, 10],
+  ["🍊", 20, 40],
+  ["🍋", 60, 90],
+  ["🍐", 80, 120],
+  ["🍏", 100, 140],
+  ["🫐", 205, 245],
+  ["🍆", 260, 290],
+  ["🍇", 290, 320],
+];
+
 const IndexPage = () => {
   return (
-    <div className="flex items-center justify-center bg-indigo-500 min-h-layout">
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII"
-    />
-    </div>
-  )
-}
+    <div className="bg-indigo-500">
+      {FOOD.map(([emoji, hueA, hueB]) => (
+        <Card emoji={emoji} hueA={hueA} hueB={hueB} key={emoji} />
+      ))}
+    </div >
+  );
+};
 
 export default IndexPage
 
