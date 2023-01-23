@@ -23,7 +23,7 @@ const Header = () => (
   <header className="w-full p-4 bg-black">
     <nav>
       <ul className="flex align-center justify-start">
-        {NAVIGATION.map(item => <li>
+        {NAVIGATION.map(item => <li key={item.title}>
           <Link to={item.path} replace className={`mx-2 ${item.additionalClass}`}>{item.title}</Link>
         </li>)}
       </ul>

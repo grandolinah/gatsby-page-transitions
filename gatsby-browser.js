@@ -23,5 +23,6 @@ export const shouldUpdateScroll = ({
       transitionDelay
     );
   }
+
   return false;
 };
