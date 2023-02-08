@@ -31,7 +31,7 @@ const Section = ({ isActive, content, onActiveChange, bgColor }) => {
   return (
     <section
       ref={setRefs}
-      className={`min-h-screen min-w-full relative py-20 px-4 ${bgColor}`}
+      className={`min-h-screen min-w-full relative py-20 px-4 rounded-b-lg ${bgColor}`}
     >
       <div>{content}</div>
     </section>

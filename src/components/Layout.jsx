@@ -1,8 +1,9 @@
 import React, { useRef } from "react"
 import { motion, AnimatePresence, useMotionValueEvent, useScroll, scrollYProgress } from "framer-motion"
 
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./Header";
+import Footer from "./Footer";
+import FadeInWhenVisible from "./FadeInWhenVisible";
 
 const duration = 0.8
 
@@ -50,10 +51,10 @@ export const Layout = ({ children, location }) => {
           animate="animate"
           exit="exit"
         >
-          <motion.div className="fixed top-0 left-0 right-0 h-4 w-full origin-0 bg-lime-500 z-100" style={{ scaleX: scrollYProgress }} />
+          <motion.div className="fixed top-0 left-0 right-0 h-4 w-full origin-0 bg-lime-500" style={{ scaleX: scrollYProgress }} />
+          {children}
         </motion.main>
       </AnimatePresence>
-      {children}
       <Footer />
     </>
   )

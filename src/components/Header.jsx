@@ -21,6 +21,16 @@ const NAVIGATION = [
     title: 'page three',
     path: '/page-three',
     additionalClass: 'text-purple-500'
+  },
+  {
+    title: 'page four',
+    path: '/page-four',
+    additionalClass: 'text-sky-500'
+  },
+  {
+    title: 'page five',
+    path: '/page-five',
+    additionalClass: 'text-red-500'
   }
 ]
 
