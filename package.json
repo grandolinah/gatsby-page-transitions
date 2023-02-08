@@ -25,7 +25,8 @@
     "gatsby-transformer-sharp": "^5.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.4.1"
+    "react-intersection-observer": "^9.4.1",
+    "react-scroll-parallax": "^3.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
