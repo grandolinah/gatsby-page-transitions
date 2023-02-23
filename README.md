@@ -9,7 +9,7 @@
 
 ## 🚀 Quick start
 
-DEMO: https://gatsby-page-transitions.vercel.app/page-five/
+DEMO: https://gatsby-page-transitions.vercel.app/
 
 1.  **Create a Gatsby site.**
 
